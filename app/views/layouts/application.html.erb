@@ -13,8 +13,40 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse header-color">
+      <div class="green">
+        <h4><%= link_to 'Homepage', root_path, class: "green" %></h4>
+        <% if current_user %>
+          <h5><%= "Logged in as #{current_user.username}" %></h5>
+        <% end %>
+        <h5 class="cursor header-info-button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="green">More Info</span>
+        </h5>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <h5 class="green">
+          <%= link_to 'https://github.com/Learningstuff98/andy-strube-blog' do %>
+            <div class="link green">Github</div>
+          <% end %>
+          <br/>
+          <%= link_to 'https://www.linkedin.com/in/andy-strube-6231ba152/' do %>
+            <div class="link green">Linkedin</div>
+          <% end %>
+          <br/>
+          <%= link_to 'https://docs.google.com/document/d/1qm4nBdIZfsx8zh4IwYvkVuQYclpOXUCVxnC9vV3_eBM/edit' do %>
+            <div class="link green">Resume</div>
+          <% end %>
+          <br/>
+          andystrube64@gmail.com
+        </h5>
+      </div>
+    </nav>
+
+    <h4 class="green text-center">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </h4>
 
     <%= yield %>
   </body>

@@ -1,1 +1,25 @@
 @import "bootstrap/scss/bootstrap";
+
+.header-color {
+  background-color: #101825;
+}
+
+.green {
+  color: #00C122;
+}
+
+.cursor:hover {
+  cursor: pointer;
+}
+
+.link:hover {
+  color: rgb(14, 73, 168);
+}
+
+.link {
+  display: inline-block;
+}
+
+.header-info-button {
+  display: inline-block;
+}
