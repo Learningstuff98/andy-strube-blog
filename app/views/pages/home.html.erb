@@ -1,11 +1,13 @@
-<h1>Home Page</h1>
+<div class="green page-content">
 
-<% if current_user %>
-  <h3><%= "Your currently logged in as #{current_user.username}" %></h3>
-  <br/>
-  <h3><%= link_to 'Log out', destroy_user_session_path, method: :delete %></h3>
-<% else %>
-  <h3><%= link_to "Log in", new_user_session_path %></h3>
-  <br/>
-  <h3><%= link_to "Sign up", new_user_registration_path %></h3>
-<% end %>
+  <h3>Home Page</h3>
+
+  <% if current_user %>
+    <h3><%= link_to 'Log out', destroy_user_session_path, method: :delete %></h3>
+  <% else %>
+    <h3><%= link_to "Log in", new_user_session_path %></h3>
+    <br/>
+    <h3><%= link_to "Sign up", new_user_registration_path %></h3>
+  <% end %>
+
+</div>
