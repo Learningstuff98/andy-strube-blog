@@ -5,7 +5,9 @@
     <%= simple_form_for @post, url: posts_path do |f| %>
       <h4 class="green"><%= f.input :title %></h4>
       <br/>
-      <h4 class="green"><%= f.input :content %></h4>
+      <div class="post-content-input">
+        <%= f.rich_text_area :content %>
+      </div>
       <br/>
       <%= f.submit 'Create', class: 'btn btn-primary' %>
     <% end %>

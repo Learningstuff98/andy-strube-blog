@@ -4,6 +4,10 @@ body {
   background-color: #0a0f18;
 }
 
+.post-content-input {
+  background-color: white;
+}
+
 .header-color {
   background-color: #101825;
 }
@@ -49,4 +53,9 @@ body {
   border: 2px solid;
   border-color: #00C122;
   border-radius: 10px;
+}
+
+.post-content {
+  margin-left: 20px;
+  margin-right: 20px;
 }
