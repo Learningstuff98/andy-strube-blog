@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="box text-center col-8 green">
+    <h2>Make a Post</h2>
+    <br/>
+    <%= simple_form_for @post, url: posts_path do |f| %>
+      <h4 class="green"><%= f.input :title %></h4>
+      <br/>
+      <h4 class="green"><%= f.input :content %></h4>
+      <br/>
+      <%= f.submit 'Create', class: 'btn btn-primary' %>
+    <% end %>
+    <br/>
+  </div>
+</div>
