@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="box text-center col-8 green">
+    <h2>Make a Post</h2>
+    <br/>
+    <%= simple_form_for @post, url: posts_path do |f| %>
+      <h4 class="green"><%= f.input :title %></h4>
+      <br/>
+      <div class="post-content-input">
+        <%= f.rich_text_area :content %>
+      </div>
+      <br/>
+      <%= f.submit 'Create', class: 'btn btn-primary' %>
+    <% end %>
+    <br/>
+  </div>
+</div>

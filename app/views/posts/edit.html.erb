@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="box text-center col-8 green">
+    <h2>Edit this post</h2>
+    <br/>
+    <%= simple_form_for @post, url: post_path do |f| %>
+      <h4 class="green"><%= f.input :title %></h4>
+      <br/>
+      <div class="post-content-input">
+        <%= f.rich_text_area :content %>
+      </div>
+      <br/>
+      <%= f.submit 'Update', class: 'btn btn-primary' %>
+    <% end %>
+    <br/>
+  </div>
+</div>
