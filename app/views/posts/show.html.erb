@@ -3,6 +3,13 @@
   <h3 class="page-content">
     <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-primary" %>
     <br/><br/>
+    <%= link_to "Delete Post",
+      post_path(@post),
+      method: :delete,
+      data: { confirm: "Are you sure?" },
+      class: "btn btn-primary"
+    %>
+    <br/><br/>
     <%= @post.title %>
   </h3>
 

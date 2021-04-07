@@ -23,6 +23,12 @@ class PostsController < ApplicationController
     redirect_to post_path(post)
   end
 
+  def destroy
+    post = current_post
+    post.destroy
+    redirect_to root_path
+  end
+
   private
 
   def current_post
