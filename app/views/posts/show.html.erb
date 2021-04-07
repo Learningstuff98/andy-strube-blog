@@ -1,6 +1,8 @@
 <div class="green">
 
   <h3 class="page-content">
+    <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-primary" %>
+    <br/><br/>
     <%= @post.title %>
   </h3>
 
@@ -9,5 +11,7 @@
   <h4 class="post-content">
     <%= @post.content %>
   </h4>
+
+  <br/><br/><br/><br/>
 
 </div>
